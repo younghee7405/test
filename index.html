@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script lang="ja">
+        // $(function(){
+            // para01 = $('.para.para01')
+            // para01.css()
+            // $(window).scroll(function(){
+
+            // })
+        // })//
+        
+            var scrolltop=0;
+            
+            window.onload = function(){
+                para01 = document.querySelector(".para.para01")
+                para02 = document.querySelector(".para.para02")
+                para03 = document.querySelector(".para.para03")
+                para04 = document.querySelector(".para.para04")
+                para05 = document.querySelector(".para.cloud01")
+                para06 = document.querySelector(".para.cloud02")
+                para07 = document.querySelector(".title h1")
+
+                window.addEventListener("scroll", scrollFun, false)
+            }
+
+            
+
+            function scrollFun(){
+                scrolltop = document.documentElement.scrollTop;
+                console.log("scrolltop :" , scrolltop);
+                
+                // para01.style.transform = "translate3d(0px," +   scrolltop * 0.4  + "px ,0px )";
+                para02.style.transform = "translate3d(0px," +   scrolltop * 0.4  + "px ,0px )";
+                para03.style.transform = "translate3d(0px," +   scrolltop * 0.6  + "px ,0px )";
+                para04.style.transform = "translate3d(0px," +   scrolltop * 0.8  + "px ,0px )";
+                para05.style.transform = "translate3d(0px," +   scrolltop * 1.3  + "px ,0px )";
+
+            }
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="img_wrap">
+            <div class="para para01"></div>
+            <div class="para para02"></div>
+            <div class="para para03"></div>
+            <div class="para para04"></div>
+            <div class="para cloud01"></div>
+            <div class="para cloud02"></div>
+            <div class="title">
+                <h1>parallax title</h1>
+            </div>
+        </div><!-- img_wrap -->
+        <section id="wrap01"></section>
+        <section id="wrap02"></section>
+        <section id="wrap03"></section>
+        <section id="wrap04"></section>
+
+    </div><!-- container -->
+</body>
+</html>
